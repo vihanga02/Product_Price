@@ -20,3 +20,5 @@ head = soup.find('h1').get_text()
 
 #get the transcropt as a text
 htranscript= soup.find('div',class_='full-script').get_text(strip = True, separator=' ')
+
+print(head)

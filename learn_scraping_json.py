@@ -5,9 +5,8 @@ from bs4 import BeautifulSoup
 url = 'https://glomark.lk/coconut/p/11624'
 
 result = requests.get(url)
-result_text = result.text
 
-soup = BeautifulSoup(result.content, 'html.parser')
+soup = BeautifulSoup(result.text, 'html.parser')
 
 script = soup.find('script', {'type': 'application/ld+json'})
 
